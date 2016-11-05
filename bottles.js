@@ -22,7 +22,6 @@ var bottles = {
 
 };
 
-
 function numOfBottles (cash) {
 
   bottles.initialBottles.count = Math.floor(cash / cashPerFullBottle);
@@ -38,7 +37,6 @@ function numOfBottles (cash) {
   bottles.capBottles.leftOverCaps = Math.floor(bottles.initialBottles.count
                                        % capPerFullBottle);
 }
-
 
 if (!isNaN(cash)) {
   numOfBottles(cash);
