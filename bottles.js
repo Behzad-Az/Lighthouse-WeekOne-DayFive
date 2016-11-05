@@ -4,29 +4,24 @@ const cashPerFullBottle = 2;
 const emptyBottlePerFullBottle = 2;
 const capPerFullBottle = 4;
 
-var cashPerEmptyBottle = cashPerFullBottle / emptyBottlePerFullBottle;
-var cashPerCap = cashPerFullBottle / capPerFullBottle;
-
 var totalBottles = 0;
-var ouptut = "";
 
 var bottles = {
   initialBottles: {
     count: 0,
     leftOverCash: 0
   },
-
   emptyReturnBottles: {
     count: 0,
     leftOverEmptyBottles: 0
   },
-
   capBottles: {
     count: 0,
     leftOverCaps: 0
   }
 
 };
+
 
 function numOfBottles (cash) {
 
@@ -43,6 +38,7 @@ function numOfBottles (cash) {
   bottles.capBottles.leftOverCaps = Math.floor(bottles.initialBottles.count
                                        % capPerFullBottle);
 }
+
 
 if (!isNaN(cash)) {
   numOfBottles(cash);
